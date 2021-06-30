@@ -10,13 +10,14 @@
 }
 
 .contacts-box{
-    background-color: rgb(250, 246, 242);
+    background-color: rgb(255, 255, 255);
     width: 40%;
     height: 80vh;
+    overflow-y: scroll;
 }
 
 .conversation-box{
-    background-color: beige;
+    background-image: url("../img/mine.jpg");
     width: 60%;
     height: 80vh;
 }
@@ -24,15 +25,16 @@
 .my-info {
     height: 60px;
     justify-content: space-between;
-    background-color: rgb(221, 216, 216);
+    background-color: rgb(231, 227, 227);
 }
 
 .main-user{
+    width: 400px;
     margin: auto;
 }
 
 .main-user img {
-    width: 10%;
+    width: 10%; 
     border-radius: 30px;
 }
 
@@ -42,19 +44,82 @@
 }
 
 .my-button i{
+    color: darkgray;
     margin-left:20px;
 }
 
 
 .notifications {
+    padding-top:10px;
+    padding-bottom:10px;
     background-color: rgb(159, 216, 248);
 }
 
-.notifications > i {
+.notifications i {
     margin-right:20px;
     background-color: white;
     color: rgb(159, 216, 248);
     padding: 10px 8px;
     border-radius: 50%;
     font-size: 20px;
+}
+
+.search{
+    background-color: rgb(231, 227, 227);
+    padding-top:8px;
+    padding-bottom:8px;
+}
+
+.search input{
+    margin-left:10px;
+    width: 85%;
+}
+
+.search::before {
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f002";
+}
+
+.contact-list img{
+    margin-top:10px;
+    border-radius:50%;
+    width: 12%;
+}
+
+.contact-chat-info {
+    padding-top:10px;
+    border-left: 1px solid grey;
+    height: 60px;
+    justify-content: space-between;
+    background-color: rgb(231, 227, 227);
+}
+
+.main-chat-contact{
+    width: 400px;
+}
+
+.main-chat-contact img {
+    width: 10%;
+    border-radius: 30px;
+}
+
+.last-seen{
+    color: rgb(165, 164, 164);
+    font-size:10px;
+    margin-left:50px;
+    
+}
+
+.contact-chat-button{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+.contact-chat-button i{
+    color: darkgray;
+    margin-left:20px;
+}
+
+.chat-space{
+    overflow-y: scroll;
 }
