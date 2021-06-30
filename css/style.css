@@ -12,14 +12,20 @@
 .contacts-box{
     background-color: rgb(255, 255, 255);
     width: 40%;
-    height: 80vh;
+    height: calc(100vh - 84px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     overflow-y: scroll;
 }
 
 .conversation-box{
     background-image: url("../img/mine.jpg");
     width: 60%;
-    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 84px);
+    overflow: hidden;
 }
 
 .my-info {
@@ -61,7 +67,7 @@
     color: rgb(159, 216, 248);
     padding: 10px 8px;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .search{
@@ -78,6 +84,7 @@
 .search::before {
     font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f002";
 }
+
 
 .contact-list img{
     margin-top:10px;
@@ -120,6 +127,66 @@
     margin-left:20px;
 }
 
-.chat-space{
-    overflow-y: scroll;
+
+.chat-space-container{
+    overflow-y:scroll;
+    height: calc(100vh - 200px);
+
+}
+
+.sender {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.discalimer-container{
+    display: flex;
+    justify-content: center;
+}
+
+.end-to-end {
+    background-color:rgb(227, 233, 227);
+    padding: 10px ;
+    border-radius: 10px;
+    margin-top:10px;
+    text-align: center;
+    font-size:15px;
+}
+
+.sender-text {
+    background-color:lightgreen;
+    padding: 10px ;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.recipient-text {
+    background-color: white;
+    padding: 10px ;
+    display: inline-block;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+
+.footer-container{
+    background-color: lightgray;
+}
+
+.footer-container i {
+    padding: 15px;
+    font-size: 25px;
+    color: rgb(100, 107, 110);
+}
+
+.text-area {
+    flex-grow: 1;
+    margin: 10px ;
+    padding-left: 15px;
+}
+
+.text-area input{
+    width: 100%;
+    border-radius: 10px;
 }
