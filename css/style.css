@@ -1,0 +1,60 @@
+.container-fluid{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom,
+    rgb(12, 145, 89) 20% , rgb(182, 196, 199) 10%);
+}
+
+.ui{
+    padding-top: 30px;
+}
+
+.contacts-box{
+    background-color: rgb(250, 246, 242);
+    width: 40%;
+    height: 80vh;
+}
+
+.conversation-box{
+    background-color: beige;
+    width: 60%;
+    height: 80vh;
+}
+
+.my-info {
+    height: 60px;
+    justify-content: space-between;
+    background-color: rgb(221, 216, 216);
+}
+
+.main-user{
+    margin: auto;
+}
+
+.main-user img {
+    width: 10%;
+    border-radius: 30px;
+}
+
+.my-button{
+    display: flex;
+    margin:  auto;
+}
+
+.my-button i{
+    margin-left:20px;
+}
+
+
+.notifications {
+    background-color: rgb(159, 216, 248);
+}
+
+.notifications > i {
+    margin-right:20px;
+    background-color: white;
+    color: rgb(159, 216, 248);
+    padding: 10px 8px;
+    border-radius: 50%;
+    font-size: 20px;
+}
