@@ -87,14 +87,21 @@ const add = new Vue (
                         }
                     ],
                 },
-            ]
-            
+            ],
+            mainContact: 0   
         },
         methods: {
-            createSrc: function (contact) {
-                let src ='';
-                return src = './img/avatar' + contact.avatar +'.jpg';
-            }
+            createSrc: function (contact) {       //milestone 1 
+                return './img/avatar' + contact.avatar +'.jpg';
+            },                                                    
+            selectedContact: function (index) { 
+                return this.mainContact = index;
+            },                                    //milestone 2
+            textSent: function (status) {  
+                if (status === 'sent'){
+                    return true;
+                }
+            } 
         }
     }
 )

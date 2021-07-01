@@ -19,7 +19,7 @@
         <div class="container">
             
             <div class="row ui">
-                <div class="contacts-box col-6">
+                <div class="contacts-box col-6"> <!--menu sx-->
                     
                     <div class="row">
                         <div class="my-info d-flex">
@@ -50,8 +50,9 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="contact-list" v-for="(contact,index) in contacts"> 
+                    <div class="row">  <!--lista dei contatti importata da js-->
+                        <div class="contact-list" v-for="(contact,index) in contacts"
+                        @click="selectedContact(index)"> 
                             <img :src="createSrc(contact)" class="round-img" alt="">                       
                             <span>{{contact.name}}</span> <hr>
                         </div>
@@ -60,13 +61,13 @@
                 </div>
     
                 
-                <div class="conversation-box col-6">
+                <div class="conversation-box col-6">  <!--menu dx-->
 
                     <div class="row">
-                        <div class="contact-chat-info d-flex">
+                        <div class="contact-chat-info d-flex" >
                             <div class="main-chat-contact">
-                                <img src="./img/avatar_1.jpg" alt=""> <span>Michele</span>
-                                <span class="last-seen"> Ultimo accesso oggi alle </span>
+                                <span>{{mainContact}}</span>   
+                                <span class="last-seen"> Ultimo accesso oggi alle</span>
                             </div>
                             <div class="contact-chat-button">
                                 <i class="fas fa-search"></i>
@@ -88,89 +89,42 @@
                                     più
                                 </div>
                             </div>
-                            
-                            <div class="sender">
-                                <div class="sender-text">
-                                    bro
+
+                                   <!--area di visualizzazione dei messaggi importati da js-->
+                            <div v-for="(message,index) in contacts[mainContact].messages">
+                                <div class="row" v-if="textSent(message.status)">
+                                    <div class="sender">
+                                        <div class="sender-text">
+                                            <div>
+                                                {{message.text}}
+                                            </div>
+                                            <div class="date">
+                                                {{message.date}} 
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-    
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    dimmi fra
-                                </div>
-                            </div>
-    
-                            <div class="sender">
-                                <div class="sender-text">
-                                    come stai?
-                                </div>
-                            </div>  
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    mah non c'è male e tu?
-                                </div>
-                            </div>  
-                            <div class="sender">
-                                <div class="sender-text">
-                                    non mi lamento :D
-                                </div>
-                            </div>
-    
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    bella!
-                                </div>
-                            </div>
-    
-                            <div class="sender">
-                                <div class="sender-text">
-                                    verresti a bere una birra stasera?
-                                </div>
-                            </div>  
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    umh, penso di si ma ti so dire più tardi
-                                </div>
-                            </div> 
-                            <div class="sender">
-                                <div class="sender-text">
-                                    va bene. Forse viene anche Giovanni comunque
-                                </div>
-                            </div>
-    
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    d'accordo poi ti so dire ;)
-                                </div>
-                            </div>
-    
-                            <div class="sender">
-                                <div class="sender-text">
-                                   bella!
-                                </div>
-                            </div>  
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                    ok ci sono
-                                </div>
-                            </div>
-                            <div class="sender">
-                                <div class="sender-text">
-                                    perfetto, allora ci vediamo alle 21:30 davanti al Dollaro Pub
-                                </div>
-                            </div>
-                            <div class="recipient">
-                                <div class="recipient-text">
-                                     a dopo ;)
+
+                                <div class="row" v-else>
+                                    <div class="recipient">
+                                        <div class="recipient-text">
+                                            <div>
+                                                {{message.text}}
+                                            </div>
+                                            <div class="date">
+                                                {{message.date}} 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
 
                         </div>
-                    </div>
+                    
                     
                       
-                        <div class="row">
+                        <div class="row"> <!--text area-->
                             <div class="footer-container d-flex ">
                                 <i class="far fa-smile"></i>
                                 <div class="text-area">
@@ -179,7 +133,7 @@
                                 <i class="fas fa-microphone"></i>
                             </div>
                         </div>
-                    
+                    </div>
 
                 </div>
 

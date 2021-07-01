@@ -9,6 +9,8 @@
     padding-top: 30px;
 }
 
+
+/* menu sx */
 .contacts-box{
     background-color: rgb(255, 255, 255);
     width: 40%;
@@ -92,6 +94,8 @@
     width: 12%;
 }
 
+
+/* menu dx */
 .contact-chat-info {
     padding-top:10px;
     border-left: 1px solid grey;
@@ -127,7 +131,8 @@
     margin-left:20px;
 }
 
-
+ 
+/* area visualizzazione messaggi */
 .chat-space-container{
     overflow-y:scroll;
     height: calc(100vh - 200px);
@@ -159,6 +164,7 @@
     display: inline-block;
     border-radius: 10px;
     margin-top: 10px;
+
 }
 
 .recipient-text {
@@ -169,7 +175,14 @@
     margin-top: 10px;
 }
 
+.date{
+    font-size:12px;
+    display: flex;
+    justify-content: flex-end;
+}
 
+
+/* text area */
 .footer-container{
     background-color: lightgray;
 }
