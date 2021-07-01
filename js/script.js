@@ -1,4 +1,4 @@
-const add = new Vue (
+const add =  new Vue (
     {
         el: '#app',
         data: {
@@ -88,7 +88,14 @@ const add = new Vue (
                     ],
                 },
             ],
-            mainContact: 0   
+            mainContact: 0,
+            newText: '',
+            myText: {
+                date: '01/07/2021 15:09',
+                text: this.newText,
+                status: 'sent'
+            }
+             
         },
         methods: {
             createSrc: function (contact) {       //milestone 1 
@@ -101,7 +108,12 @@ const add = new Vue (
                 if (status === 'sent'){
                     return true;
                 }
-            } 
+            },
+            writeText: function() {
+                this.mainContact.messages.push(myText); 
+                this.newText ='';
+                
+            }
         }
     }
-)
+); 
